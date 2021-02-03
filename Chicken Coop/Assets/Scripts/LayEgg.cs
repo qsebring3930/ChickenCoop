@@ -20,11 +20,12 @@ public class LayEgg : MonoBehaviour
 
     IEnumerator layEgg()
     {
-        for(; ; )
+        yield return new WaitForSeconds(Random.Range(2f, 5f));
+        for (; ; )
         {
             egg.transform.position = new Vector2(transform.position.x, transform.position.y);
             Instantiate(egg);
-            yield return new WaitForSeconds(Random.Range(2f,5f));
+            yield return new WaitForSeconds(Random.Range(1f, 7f));
         }
     }
 }
